@@ -1,12 +1,4 @@
-package main
 
-import (
-	"fmt"
-	"net/http"
-	"os"
-
-	"github.com/go-telegram-bot-api/telegram-bot-api"
-)
 package main
 
 import (
@@ -23,7 +15,7 @@ func main() {
 func makeCallHandler(w http.ResponseWriter, r *http.Request) {
 	// Get the caller ID from the query string
 	callerID := r.URL.Query().Get("callerID")
-# http://localhost:8080/makecall?callerID=My+CallerID+<1234567890>
+// http://localhost:8080/makecall?callerID=My+CallerID+<1234567890>
 	// Write the call file
 	err := writeCallFile(callerID)
 	if err != nil {
